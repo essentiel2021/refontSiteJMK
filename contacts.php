@@ -151,10 +151,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <div id="main-nav" class="collapse navbar-collapse">
                     <ul class="navbar-nav ml-auto">
                         <li class="dropdown">
-                            <a href="#" class="nav-item nav-link">ACCEUIL</a>
+                            <a href="index.html" class="nav-item nav-link">ACCEUIL</a>
                         </li>
                         <li class="dropdown">
-                            <a href="#" class="nav-item nav-link" data-toggle="dropdown">A PROPOS</a>
+                            <a href="index.html" class="nav-item nav-link" data-toggle="dropdown">A PROPOS</a>
                             <div class="dropdown-menu">
                                 <a href="presentation.html" class="dropdown-item">Présentation</a>
                                 <a href="equipe.html" class="dropdown-item">Notre Equipe</a>
@@ -178,13 +178,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <li class="dropdown">
                             <a href="#" class="nav-item nav-link" data-toggle="dropdown">NOS PRODUITS</a>
                             <div class="dropdown-menu">
-                                <a href="land-preservation.html" class="dropdown-item">Agro Transparance</a>
-                                <a href="farm-plants.html" class="dropdown-item">FieldConnect</a>
-                                <a href="farm-inspection.html" class="dropdown-item">ONG GénieBio</a>
+                                
+                                <a href="prod_fieldconnect.html" class="dropdown-item">FieldConnect</a>
+                                <a href="prod_geniebio.html" class="dropdown-item">ONG GénieBio</a>
                             </div>
                         </li>
                         <li class="dropdown">
-                            <a href="#" class="nav-item nav-link">ACTUALITES</a>
+                            <a href="actus.html" class="nav-item nav-link">ACTUALITES</a>
                         </li>
                     </ul>
                 </div>
