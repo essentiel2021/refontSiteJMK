@@ -396,11 +396,11 @@ li.phone::before {
 .about-banner-layer {
     background-color: #b87d2a;
     padding: 10px 10px 20px 10px;
-    width: 300px;
+    width: 500px;
     margin: auto;
     position: absolute;
     bottom: 0;
-    right: 0;
+    right: 200px;
     left: 0;
     box-shadow: 0px 0px 0px 3px white inset;
 }
@@ -477,9 +477,9 @@ li.phone::before {
 }
 
 .ws-img {
-    background-image: url("../images/commons/agros-img-2.jpg");
+    background-image: url("../images/commons/fiel2_connect.jpg");
     height: 600px;
-    background-position: center;
+    background-position: left;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -537,7 +537,7 @@ li.phone::before {
 
 .counter-section {
     background-color: var(--headline-color);
-    margin-top: -130px;
+    margin-top: -70px;
     padding: 120px 0px 80px;
 }
 

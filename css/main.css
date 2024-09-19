@@ -68,7 +68,45 @@ body {
   background-color: #FFF;
   letter-spacing: 0px;
 }
+.project-caption {
+  max-width: 600px; /* Limiter la largeur du conteneur */
+}
 
+#text {
+  max-height: 7em; /* Limiter à environ 4 lignes de texte (ajustable) */
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  transition: max-height 0.3s ease;
+}
+
+#text.expanded {
+  white-space: normal;
+  max-height: none; /* Enlever la limitation pour afficher tout le texte */
+}
+
+#toggle-button {
+  background-color: #b87d2a;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+#toggle-button:hover {
+  background-color: #271906;
+}
+
+
+.text-container {
+  width: 300px;
+}
+
+
+.expanded {
+  white-space: normal;
+  max-height: none; /* Enlever la limite de hauteur */
+}
 strong{
   font-weight: bold;
 }
@@ -86,7 +124,7 @@ iframe{
 }
 
 img{
-  width: 78%;
+  width: 90%;
 }
 
 /** Transition **/
@@ -232,7 +270,7 @@ h5.subtitle{
 
   .mb-5,
   .my-5 {
-    margin-bottom: 5rem !important;
+    margin-bottom: 1rem !important;
   }
 
   .spacing-p-right {

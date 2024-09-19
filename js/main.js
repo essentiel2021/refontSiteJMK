@@ -645,3 +645,17 @@ $('.basic-carousel .owl-carousel').owlCarousel({
         }
     }
 });
+
+document.getElementById("toggle-button").addEventListener("click", function() {
+    const text = document.getElementById("text");
+    const button = document.getElementById("toggle-button");
+
+    if (text.classList.contains("expanded")) {
+        text.classList.remove("expanded");
+        button.textContent = "Lire plus";
+    } else {
+        text.classList.add("expanded");
+        button.textContent = "Lire moins";
+    }
+});
+

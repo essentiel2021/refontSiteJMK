@@ -411,7 +411,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <div class="col-lg-6">
                         <ul class="footer-terms">
                             <li><a href="about-us.html">A propos</a></li>
-                            <li><a href="services.html">Négoce</a></li>
+                            
                             <li><a href="contacts.php">Contacts</a></li>
                         </ul>
                     </div>
