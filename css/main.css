@@ -72,7 +72,7 @@ body {
   max-width: 600px; /* Limiter la largeur du conteneur */
 }
 
-#text {
+.text {
   max-height: 7em; /* Limiter à environ 4 lignes de texte (ajustable) */
   overflow: hidden;
   white-space: nowrap;
@@ -80,12 +80,12 @@ body {
   transition: max-height 0.3s ease;
 }
 
-#text.expanded {
+.text.expanded {
   white-space: normal;
   max-height: none; /* Enlever la limitation pour afficher tout le texte */
 }
 
-#toggle-button {
+.toggle-button {
   background-color: #b87d2a;
   color: white;
   border: none;

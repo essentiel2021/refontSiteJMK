@@ -159,7 +159,7 @@
                         </figure>
                         <div class="project-caption">
                             <h4>Conseil en Négoce de Matières Premières</h4> <br>
-                             <p id="text">- Diagnostic des chaînes d'approvisionnement <br>
+                             <p class="text">- Diagnostic des chaînes d'approvisionnement <br>
                                 - Analyse des marchés et filières <br>
                                 - Développement stratégique de chaînes de valeurs <br>
                                 - Accompagnement dossiers d'agrément <br>
@@ -170,7 +170,7 @@
                                 - Formations techniques agricoles <br>
                                 - Développement de marchés de niches (identification des besoins et approvisionnement) et mise en relation.
                             </p>
-                            <button id="toggle-button">Lire plus</button>
+                            <button class="toggle-button">Lire plus</button>
                         </div>
                     </div>
                 </div>
@@ -186,7 +186,7 @@
                         </figure>
                         <div class="project-caption">
                             <h4>Etude et Gestion de Projets</h4><br><br>
-                            <p id="text">- Analyse et définition des objectifs <br>
+                            <p class="text">- Analyse et définition des objectifs <br>
                                 - Élaboration de plans de mise en œuvre <br>
                                 - Définition et implémentation <br>
                                 - Conduite du changement <br>
@@ -195,7 +195,7 @@
                                 - Accompagnement aux partenariats decofounding <br>
                                 - Planification et suivi-évaluation des projets <br>
                                 - Évaluation Tierce partie</p>
-                                <button id="toggle-button">Lire plus</button>
+                                <button class="toggle-button">Lire plus</button>
                         </div>
                     </div>
                 </div>
@@ -211,12 +211,12 @@
                         </figure>
                         <div class="project-caption">
                             <h4>Conseil en Developpement des Entreprises</h4><br>
-                            <p id="text">- Diagnostiquer les points de faiblesses. <br>
+                            <p class="text">- Diagnostiquer les points de faiblesses. <br>
                                 - Révéler les axes de progrès qui soient mesurables. <br>
                                 - Accompagner nos clients dans leurs objectifs de construction, redéploie ment, de consolidation des activités des départements d'approvisionnement et transport. <br>
                                 - Favoriser les croisements d'expériences d'une entreprise à une autre.
                             </p>
-                            <button id="toggle-button">Lire plus</button>
+                            <button class="toggle-button">Lire plus</button>
                         </div>
                     </div>
                 </div>
@@ -232,7 +232,7 @@
                         </figure>
                         <div class="project-caption">
                             <h4>Conseil en Communication</h4> <br><br>
-                                 <p id="text">-Elaboration de votre stratégie de communication <br>
+                                 <p class="text">-Elaboration de votre stratégie de communication <br>
                                     - Conseil stratégique en communication <br>
                                     - Marketing relationnel <br>
                                     - Coordination/supervision de mise en œuvre de plans et stratégies de communication <br>
@@ -245,7 +245,7 @@
                                     - Conception et Réalisation de Site Web et Application Web <br>
                                     - Publicité <br>
                                     - Evènementiel</p>
-                                    <button id="toggle-button">Lire plus</button>
+                                    <button class="toggle-button">Lire plus</button>
                         </div>
                     </div>
                 </div>
@@ -261,12 +261,12 @@
                         </figure>
                         <div class="project-caption">
                             <h4>Conseil en Logistique et Transport</h4><br>
-                            <p id="text">- Diagnostiquer les points de faiblesses. <br>
+                            <p class="text">- Diagnostiquer les points de faiblesses. <br>
                                 - Révéler les axes de progrès qui soient mesurables. <br>
                                 - Accompagner nos clients dans leurs objectifs de construction, redéploie­ment, de consolidation des activités des départements d'approvisionne­ment et transport. <br>
                                 - Favoriser les croisements d'expé­rience d'une entreprise à une autre.
                             </p>
-                            <button id="toggle-button">Lire plus</button>
+                            <button class="toggle-button">Lire plus</button>
                         </div>
                     </div>
                 </div>
@@ -282,12 +282,12 @@
                         </figure>
                         <div class="project-caption">
                             <h4>Import et Export</h4> <br><br>
-                               <p id="text">Nous gérons vos opérations de commerce à l'international pour vous aider à importer du monde entier, en toute confiance et avec une garantie de bonne fin de chaque transaction. <br>
+                               <p class="text">Nous gérons vos opérations de commerce à l'international pour vous aider à importer du monde entier, en toute confiance et avec une garantie de bonne fin de chaque transaction. <br>
                                 - Importation de matériels agricoles et industriels <br>
                                 - lmport et Export de produits divers <br>
                                 - Inspection & Contrôle des marchandises
                                </p>
-                               <button id="toggle-button">Lire plus</button>
+                               <button class="toggle-button">Lire plus</button>
                         </div>
                     </div>
                 </div>
@@ -303,7 +303,7 @@
                         </figure>
                         <div class="project-caption">
                             <h4>Environnement & Developpement Durable</h4> <br>
-                               <p id="text">- Appui aux politiques et stratégies de lutte contre le changement climatique <br>
+                               <p class="text">- Appui aux politiques et stratégies de lutte contre le changement climatique <br>
                                 - Inventaire de la biodiversité <br>
                                 - Cartographie écologique et forestière <br>
                                 - Reforestation individuelle et communautaire <br>
@@ -315,7 +315,7 @@
                                 - Renforcement des capacités des acteurs agricoles et forestiers en agroforesterie <br>
                                 - Conception, planification et gestion des projets agroforestiers
                                </p>
-                               <button id="toggle-button">Lire plus</button>
+                               <button class="toggle-button">Lire plus</button>
                         </div>
                     </div>
                 </div>
@@ -429,6 +429,20 @@
     <script src="js/main.js"></script>
     <!-- JAVASCRIPTS END -->
 
+    <script>
+        $(document).ready(function(){
+            $('.toggle-button').click(function() {
+                var text = $(this).siblings('.text');  // Select the sibling with class "text"
+                if (text.hasClass('expanded')) {
+                    text.removeClass('expanded');
+                    $(this).text('Lire plus');
+                } else {
+                    text.addClass('expanded');
+                    $(this).text('Lire moins');
+                }
+            });
+        });
+    </script>
     <!-- REVOLUTION JS FILES -->
     <script src="revolution/js/jquery.themepunch.tools.min.js"></script>
     <script src="revolution/js/jquery.themepunch.revolution.min.js"></script>
