@@ -123,8 +123,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             <a href="mailto:infos@jmkconsulting-ci.com"><p class="schedule">infos@jmkconsulting-ci.com</p></a>
                             
                             <ul class="top-social">
-                                <li><a href="https://www.facebook.com/jmkconsultingcompany"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="https://www.linkedin.com/company/jmk-consulting-company/"><i class="fab fa-linkedin-in"></i></a></li>
+                                <li><a href="https://www.facebook.com/jmkconsultingcompany" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="https://www.linkedin.com/company/jmk-consulting-company/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
                             </ul>
 
                         </div>
@@ -232,7 +232,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
         </div>
 
-        <div class="container mt-5 mb-5">
+        <!-- <div class="container mt-5 mb-5">
             <div class="row">
                 <div class="col-lg-6">
                     <div class="contact-left">
@@ -320,7 +320,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     </form>
                 </div>
             </div>
-        </div>
+        </div> -->
     </section>    
 
     <!-- content end -->
@@ -339,8 +339,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             <p>« Construire et développer des filières agricoles résilientes et des PME durables »
                             </p>
                             <ul class="footer-social">
-                                <li><a href="https://www.facebook.com/jmkconsultingcompany"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="https://www.linkedin.com/company/jmk-consulting-company/"><i class="fab fa-linkedin-in"></i></a></li>
+                                <li><a href="https://www.facebook.com/jmkconsultingcompany" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="https://www.linkedin.com/company/jmk-consulting-company/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
                             </ul>
                         </div>
                     </div>

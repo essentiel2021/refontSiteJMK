@@ -1586,3 +1586,7 @@ screen and (max-height: 300px) {
 
 @media (max-width:380px) {}
 
+body > footer > div > div.center-footer > div > div:nth-child(3) > div > ul > li:nth-child(3) > a
+{
+    font-size : 13px; 
+}
