@@ -510,7 +510,7 @@ li.phone::before {
 
 .middle-content h5 {
     font-size: 14px;
-    color: var(--headline-color);
+    color: #e0e0e0;
 }
 
 .ws-box-layer {
