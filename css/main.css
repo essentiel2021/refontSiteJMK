@@ -227,7 +227,7 @@ h6 {
 }
 
 p {
-  margin: 0 0 15px;
+  margin: 0 0 5px;
   font-family: 'Open Sans', sans-serif;
   font-size: 15px;
   color: var(--paragraph-color);

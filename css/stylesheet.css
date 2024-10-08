@@ -331,7 +331,7 @@ li.phone::before {
     3. PAGE HERO.
 =========================================*/
 .pages-hero {
-    background-image: url("../images/commons/pages-bg.jpg");
+    background-image: url("../images/commons/Untitled Design_6.jpg");
     height: 450px;
     background-position: center;
     background-repeat: no-repeat;
@@ -478,15 +478,16 @@ li.phone::before {
 
 .ws-img {
     background-image: url("../images/commons/fiel2_connect.jpg");
-    height: 600px;
+    height: 355px;
     background-position: left;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    border: 1px solid #b87d2a;
 }
 
 .ws-right-layer {
-    height: 550px;
+    height: 470px;
     background-color: var(--secundary-color);
     margin-top: 100px;
     margin-left: -100px;
