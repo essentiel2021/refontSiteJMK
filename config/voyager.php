@@ -1,5 +1,8 @@
 <?php
 
+use TCG\Voyager\Widgets\PageDimmer;
+use TCG\Voyager\Widgets\UserDimmer;
+
 return [
     /*
     |--------------------------------------------------------------------------
@@ -111,7 +114,7 @@ return [
          */
         'locales' => [
             'en',
-            //'pt',
+            'fr',
         ],
     ],
 
@@ -144,7 +147,8 @@ return [
         ],
 
         'widgets' => [
-
+            UserDimmer::class,
+            PageDimmer::class
         ],
 
     ],
@@ -181,7 +185,7 @@ return [
     |
     */
 
-    'primary_color' => '#22A7F0',
+    'primary_color' => '#b87d2a',
 
     'show_dev_tips' => true, // Show development tip "How To Use:" in Menu and Settings
 
