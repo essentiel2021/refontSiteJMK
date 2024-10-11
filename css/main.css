@@ -62,13 +62,13 @@ footer, header, hgroup, menu, nav, section {
 
 @media (max-width:770px) 
 {
-    #slide-2800-layer-4_4807,#slide-2800-layer-4_7072,#slide-2800-layer-4_8413,#slide-2800-layer-4_9008{
+    .bouton_contact_deslide{
         margin-top: 80% !important;
     }
 }
 @media (max-width:480px) 
 {
-    #slide-2800-layer-1,#slide-2800-layer-1_7514,#slide-2800-layer-1_2943,#slide-2800-layer-1_514{
+    .text_duslide{
         font-size: 24px !important;
         text-align:center;
         margin-left: 2% !important;
@@ -76,13 +76,12 @@ footer, header, hgroup, menu, nav, section {
 }
 @media (max-width:380px) 
 {
-    #slide-2800-layer-1,#slide-2800-layer-1_7514,#slide-2800-layer-1_2943,#slide-2800-layer-1_514{
+    .text_duslide{
         font-size: 19px !important;
         text-align:center;
         margin-left: 6% !important;
     }
-     #slide-2800-layer-4,#slide-2800-layer-4_4807,#slide-2800-layer-4_320,#slide-2800-layer-4_7072,#slide-2800-layer-4_5124,#slide-2800-layer-4_8413,#slide-2800-layer-4_4796,#slide-2800-layer-4_9008
-    
+     .bouton_deslide
     {
         font-size: 8px !important;
     }
