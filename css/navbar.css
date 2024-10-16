@@ -1,7 +1,7 @@
 .navbar {
   position: absolute;
   left: 0;
-  top: 38px;
+  top: 44px;
   padding: 0;
   width: 100%;
   z-index: 2;
@@ -178,11 +178,11 @@
 
 
 .navbar.fixed-top.navbar-dark .navbar-nav .nav-link.active {
-  color: #c0ca33;
+  color: #b87d2a;
 }
 
 .navbar.fixed-top.navbar-dark .navbar-nav .nav-link::after {
-  background-color: #c0ca33;
+  background-color: #b87d2a;
 }
 
 .content {
