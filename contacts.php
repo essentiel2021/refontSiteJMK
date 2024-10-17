@@ -148,10 +148,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <div id="main-nav" class="collapse navbar-collapse">
                     <ul class="navbar-nav ml-auto">
                         <li class="dropdown">
-                            <a href="index.html" class="nav-item nav-link">ACCUEIL</a>
+                            <a href="index.html" class="nav-item nav-link active">ACCUEIL</a>
                         </li>
                         <li class="dropdown">
-                            <a href="index.html" class="nav-item nav-link" data-toggle="dropdown">A PROPOS</a>
+                            <a href="#" class="nav-item nav-link" data-toggle="dropdown">A PROPOS</a>
                             <div class="dropdown-menu">
                                 <a href="presentation.html" class="dropdown-item">Présentation</a>
                                 <a href="equipe.html" class="dropdown-item">Notre Equipe</a>
@@ -159,26 +159,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             </div>
                         </li>
                         <li class="dropdown">
-                            <a href="#" class="nav-item nav-link" data-toggle="dropdown">SERVICES</a>
-                            <div class="dropdown-menu">
-                            <a href="services-detail-negoce.html" class="dropdown-item">Conseil en Négoce de Matières Premières</a>
-                                <a href="services-detail-gest_projet.html" class="dropdown-item">Etude en Gestion de Projets</a>
-                                <a href="services-detail-strat_dev.html" class="dropdown-item">Conseil en Stratégie de Developpement des Entreprises</a>
-                                <a href="services-detail-commu.html" class="dropdown-item">Conseil en Communication</a>
-                                <a href="services-detail-logis_transp.html" class="dropdown-item">Conseil en Logistique et Transport</a>
-                                <a href="services-detail-imp_exp.html" class="dropdown-item">Import Et Export</a>
-                                <a href="services-detail-dev_durable.html" class="dropdown-item">Environnement & Developpement Durable</a>
-                                <a href="contact-us-alt.html" class="dropdown-item">Digitalisation</a>
-                                <a href="contact-us-alt.html" class="dropdown-item">Conseil en Action de Developpement Communautaire</a>
-                            </div>
+                            <a href="tous_services.html" class="nav-item nav-link">SERVICES</a>
                         </li>
                         <li class="dropdown">
-                            <a href="#" class="nav-item nav-link" data-toggle="dropdown">NOS PRODUITS</a>
-                            <div class="dropdown-menu">
-                                
-                                <a href="prod_fieldconnect.html" class="dropdown-item">FieldConnect</a>
-                                <a href="prod_geniebio.html" class="dropdown-item">ONG GénieBio</a>
-                            </div>
+                            <a href="synergie_jmk.html" class="nav-item nav-link">SYNERGIE</a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="prod_fieldconnect.html" class="nav-item nav-link">PRODUITS</a>
                         </li>
                         <li class="dropdown">
                             <a href="actus.html" class="nav-item nav-link">ACTUALITES</a>
@@ -192,7 +179,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="pages-hero">
             <div class="container">
                 <div class="pages-title">
-                    <h1>Contactez Nous</h1>
+                    <h1>Contactez nous</h1>
                 </div>
             </div>
         </div>
@@ -201,16 +188,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <!-- content start  -->
     <section>
         <div class="container mt-5 mb-5">
-            <div class="section-title">
+            <!-- <div class="section-title">
                 <h2>RESTEZ EN CONTACT</h2>
-            </div>
+            </div> -->
             <div class="row">
                 <div class="col-lg-4">
                     <div class="contact-col">
                         <figure class="cc-icon">
                             <img src="images/icons/icon_contact_jmk.png" alt="...">
                         </figure>
-                        <h5><a href="tel:053-123-456-7890">(+225) 0709095378</a></h5>
+                        <h5><a href="tel:+2250787767134">(+225) 0787767134</a></h5>
                     </div>
                 </div>
                 <div class="col-lg-4">
@@ -232,33 +219,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
         </div>
 
-        <!-- <div class="container mt-5 mb-5">
+        <div class="container mt-5 mb-5">
             <div class="row">
                 <div class="col-lg-6">
-                    <div class="contact-left">
+                    <div class="contact-left" style="margin-top: 60px;">
                         <h3>Contactez-nous</h3>
                         <p>Notre équipe est heureuse de répondre à vos questions. Remplissez le formulaire et nous vous contacterons dès que possible.</p>
-                        <div class="contact-info">
-                            <div class="media">
-                                <div class="media-rectangle">
-                                    <img src="images/icons/phone.png" class="mr-3" alt="...">
-                                </div>
-                                <div class="media-body">
-                                    <h5 class="mt-0">Service de protection des cultures</a></h5>
-                                    <p>Nous avons choisi de constituer une équipe expérimentée de passionnés ayant une motivation naturelle à faire pour le mieux dans le strict intérêt des entreprises clientes.</p>
-                                </div>
-                            </div>
-                            <div class="media">
-                                <div class="media-rectangle">
-                                    <img src="images/icons/email.png" class="mr-3" alt="...">
-                                </div>
-                                <div class="media-body">
-                                    <h5 class="mt-0"><a href="mailto:info@agros.com">Assistance technique et compte</a></h5>
-                                <p>Nous sommes ici pour aider! Si vous rencontrez des problèmes techniques, contactez-nous. Nous vous servirons le meilleur support.</p>
-                                </div>
-                            </div>
-                            
-                        </div>
+                        
                     </div>
                 </div>
                 <div class="col-lg-6 spacing-md">
@@ -320,7 +287,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     </form>
                 </div>
             </div>
-        </div> -->
+        </div>
     </section>    
 
     <!-- content end -->
@@ -328,10 +295,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <!-- FOOTER START -->
     <footer>
         <div class="container mt-5">
-
             <div class="center-footer">
                 <div class="row">
-                    <div class="col-lg-4">
+                    <div class="col-lg-5">
                         <div class="footer-col footer-left-col">
                             <figure class="site-footer-logo">
                                 <img src="images/logos/footer-logo.png" alt="">
@@ -344,7 +310,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             </ul>
                         </div>
                     </div>
-                    <div class="col-lg-2">
+                    <div class="col-lg-3">
                         <div class="footer-col">
                             <h5>Liens utiles</h5>
                             <ul class="quick-links">
@@ -357,34 +323,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             </ul>
                         </div>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-4">
                         <div class="footer-col">
                             <h5>Nous contacter</h5>
                             <ul class="quick-links">
-                                <li><a href="tel:+2250709095378">(+225) 0709095378</a></li><br>
+                                <li><a href="tel:+2250709095378">(+225) 0787767134</a></li><br>
                                 <li><a href="#">RCI, Abidjan Cocody Angré 8eme Tranche</a></li><br>
                                 <li><a href="mailto:infos@jmkconsulting-ci.com">infos@jmkconsulting-ci.com</a></li>                               
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="footer-col">
-                            <h5>Dernière Actualités</h5>
-                            <ul class="list-unstyled recent-news">
-                                <li class="media">
-                                    <a href="actus.html"><img src="images/commons/blog-thumb-1.jpg" class="mr-3" alt="..."> </a>
-                                    <div class="media-body">
-                                        <h5 class="mt-0 mb-1"><a href="actus.html">Improvements in Agro Tchniques</a></h5>
-                                        <p>24-28 Janv 2022</p>
-                                    </div>
-                                </li>
-                                <li class="media">
-                                    <a href="actus.html"><img src="images/commons/blog-thumb-2.jpg" class="mr-3" alt="..."> </a>
-                                    <div class="media-body">
-                                        <h5 class="mt-0 mb-1"><a href="actus.html">Formation CacaoTrace des agents durabilité de ECOM</a></h5>
-                                        <p>23 June 2021</p>
-                                    </div>
-                                </li>
                             </ul>
                         </div>
                     </div>
@@ -397,12 +342,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <div class="footer-copyright">
                             <p>© 2022 <a href="#">Copyright © 2022, Tous droits réservés, JMK CONSULTING COMPANY</a></p>
                         </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <ul class="footer-terms">
-                            <li><a href="presentation.html">A propos</a></li>                           
-                            <li><a href="contacts.php">Contacts</a></li>
-                        </ul>
                     </div>
                 </div>
             </div>
