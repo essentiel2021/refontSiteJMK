@@ -342,7 +342,7 @@ $('.team-carousel .owl-carousel').owlCarousel({
     autoplay: false,
     autoplayTimeout: 2500,
     autoplayHoverPause: false,
-    loop: true,
+    loop: false,
     dots: true,
     margin: 0,
     nav: true,
