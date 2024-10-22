@@ -1,5 +1,6 @@
 <?php
 // Inclure le fichier de connexion
+include 'functions.php';
 include 'db.php';
 
 ?>

@@ -275,6 +275,17 @@
     
     <section>
         
+    <?php
+
+        // Préparer une requête pour récupérer les données
+        $sql = "SELECT * FROM  actualites";
+        // Exécuter la requête
+        $stmt = $pdo->query($sql);
+        // Récupérer les résultats sous forme de tableau associatif
+        $actualites = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    ?>
+
         <!-- Dernière Actualités START -->
         <div class="container mt-5 mb-5">
             <div class="section-title">
@@ -282,62 +293,29 @@
             </div>
             <div class="news-carousel">
                 <div class="owl-carousel owl-theme hover-effects image-hover">
-                    <div class="item">
-                        <div class="recent-post-box">
-                            <div class="rp-caption">
-                                <p class="date">23-25 NOV 2021</p>
-                                <a href="">
-                                    <h5>Formation CacaoTrace des agents durabilité de ECOM</h5>
-                                </a>
-                                
+                    <?php foreach ($actualites as &$actualite): ?>
+                        <?php
+                            if (isset($actualite['img_actu'])) {
+                                $actualite['img_actu'] = json_decode($actualite['img_actu'], true);
+                            }
+                        ?>
+                        <div class="item">
+                            <div class="recent-post-box">
+                                <div class="rp-caption">
+                                    <p class="date"><?= rendreDateLisible($actualite['date_heur_actu'])?></p>
+                                    <a href="/details/actualites/<?= $actualite['id']?>">
+                                        <h5><?= $actualite['titre_actu']?></h5>
+                                    </a>
+                                    
+                                </div>
+                                <figure class="rp-thumbnail">
+                                    <a href="/details/actualites/<?= $actualite['id']?>">
+                                        <img src="<?= convertBackslashToSlashForStorage($actualite['img_actu'][0]) ?>" alt="<?= $actualite['titre_actu']?>">
+                                    </a>
+                                </figure>
                             </div>
-                            <figure class="rp-thumbnail">
-                                <a href=""><img src="images/commons/agros-img-20.jpg" alt=""></a>
-                            </figure>
                         </div>
-                    </div>
-                    <div class="item">
-                        <div class="recent-post-box">
-                            <div class="rp-caption">
-                                <p class="date">24-28 Janv 2022</p>
-                                <a href="">
-                                    <h5>Formation des pépinéristes CEMOI du Loh Djiboua</h5>
-                                </a>
-                                
-                            </div>
-                            <figure class="rp-thumbnail">
-                                <a href=""><img src="images/commons/image_gest_projet2.jpg" alt=""></a>
-                            </figure>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="recent-post-box">
-                            <div class="rp-caption">
-                                <p class="date">01-04 FEB 2022</p>
-                                <a href="">
-                                    <h5>Seminaire de formation sur l'entrepreneuriat</h5>
-                                </a>
-                                
-                            </div>
-                            <figure class="rp-thumbnail">
-                                <a href=""><img src="images/commons/agros-img-22.jpg" alt=""></a>
-                            </figure>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="recent-post-box">
-                            <div class="rp-caption">
-                                <p class="date">20-22 FEV 2023</p>
-                                <a href="">
-                                    <h5>Formation sur le processus de certification CacaoTrace...</h5>
-                                </a>
-                                
-                            </div>
-                            <figure class="rp-thumbnail">
-                                <a href=""><img src="images/commons/agros-img-23.jpg" alt=""></a>
-                            </figure>
-                        </div>
-                    </div>
+                    <?php endforeach; ?>
                 </div>
             </div>
         </div>

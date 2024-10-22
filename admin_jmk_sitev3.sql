@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Oct 11, 2024 at 03:51 PM
+-- Generation Time: Oct 22, 2024 at 05:09 PM
 -- Server version: 8.0.30
 -- PHP Version: 8.1.10
 
@@ -38,6 +38,15 @@ CREATE TABLE `actualites` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `actualites`
+--
+
+INSERT INTO `actualites` (`id`, `titre_actu`, `img_actu`, `date_heur_actu`, `contenu_actu`, `auteur_actu`, `created_at`, `updated_at`) VALUES
+(2, 'Seminaire de formation sur l\'entrepreneuriat', '[\"actualites\\\\October2024\\\\rkGKTqJjTpcMYZuXSKUz.jpg\"]', '2024-05-14 17:04:00', '<p>Onverra le contenu !</p>', 'M Brou', '2024-10-22 17:05:17', '2024-10-22 17:05:17'),
+(3, 'Formation sur le processus de certification CacaoTrace...', '[\"actualites\\\\October2024\\\\DmoPNaScFP2v7B7dR1JY.jpg\"]', '2024-06-18 17:05:00', '<p>Hello</p>', 'M Brou', '2024-10-22 17:06:27', '2024-10-22 17:06:27'),
+(4, 'Formation CacaoTrace des agents durabilité de ECOM', '[\"actualites\\\\October2024\\\\GkUVLPvMEKPFQZTtDuUw.jpg\"]', '2024-05-14 17:06:00', '<p>Hello</p>', 'M Brou', '2024-10-22 17:07:10', '2024-10-22 17:07:10');
+
 -- --------------------------------------------------------
 
 --
@@ -48,6 +57,16 @@ CREATE TABLE `actualite_categorieactu` (
   `actualite_id` int UNSIGNED NOT NULL,
   `categorieactu_id` int UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `actualite_categorieactu`
+--
+
+INSERT INTO `actualite_categorieactu` (`actualite_id`, `categorieactu_id`) VALUES
+(1, 1),
+(2, 1),
+(3, 1),
+(4, 1);
 
 -- --------------------------------------------------------
 
@@ -69,6 +88,30 @@ CREATE TABLE `categorieactus` (
 
 INSERT INTO `categorieactus` (`id`, `titre_categactu`, `descript_categactu`, `created_at`, `updated_at`) VALUES
 (1, 'Agroforestérie', NULL, '2024-10-11 14:10:53', '2024-10-11 14:10:53');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `contacts`
+--
+
+CREATE TABLE `contacts` (
+  `id` int UNSIGNED NOT NULL,
+  `nom_prenom` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `sujet` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `telephone` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `message` text COLLATE utf8mb4_unicode_ci,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `contacts`
+--
+
+INSERT INTO `contacts` (`id`, `nom_prenom`, `email`, `sujet`, `telephone`, `message`, `created_at`, `updated_at`) VALUES
+(1, 'TCHIMOU', 'tchimouj99@gmail.com', 'AVEC', '+101040050052', 'Besoin d&#039;aide', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -120,19 +163,45 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (21, 1, 'role_id', 'text', 'Role', 1, 1, 1, 1, 1, 1, NULL, 9),
 (22, 4, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
 (23, 4, 'titre_actu', 'text', 'Titre Actualite', 1, 1, 1, 1, 1, 1, '{}', 2),
-(24, 4, 'img_actu', 'text', 'Image Actualite', 1, 1, 1, 1, 1, 1, '{}', 3),
-(25, 4, 'date_heur_actu', 'text', 'Date Heure Actualite', 0, 1, 1, 1, 1, 1, '{}', 4),
-(26, 4, 'contenu_actu', 'text', 'Contenu Actualite', 0, 1, 1, 1, 1, 1, '{}', 5),
+(24, 4, 'img_actu', 'multiple_images', 'Image Actualite', 1, 1, 1, 1, 1, 1, '{}', 3),
+(25, 4, 'date_heur_actu', 'timestamp', 'Date Heure Actualite', 0, 1, 1, 1, 1, 1, '{}', 4),
+(26, 4, 'contenu_actu', 'rich_text_box', 'Contenu Actualite', 0, 1, 1, 1, 1, 1, '{}', 5),
 (27, 4, 'auteur_actu', 'text', 'Auteur Actualite', 0, 1, 1, 1, 1, 1, '{}', 6),
 (28, 4, 'created_at', 'timestamp', 'Created At', 0, 0, 0, 0, 0, 0, '{}', 7),
 (29, 4, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 8),
 (30, 4, 'actualite_belongstomany_actualite_categorieactu_relationship', 'relationship', 'Categorie d Actualites', 0, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\Categorieactu\",\"table\":\"categorieactus\",\"type\":\"belongsToMany\",\"column\":\"id\",\"key\":\"id\",\"label\":\"titre_categactu\",\"pivot_table\":\"actualite_categorieactu\",\"pivot\":\"1\",\"taggable\":\"0\"}', 9),
 (31, 6, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
 (32, 6, 'titre_categactu', 'text', 'Titre Categorie d actu', 1, 1, 1, 1, 1, 1, '{}', 2),
-(33, 6, 'descript_categactu', 'text', 'Description Categorie d actu', 0, 1, 1, 1, 1, 1, '{}', 3),
+(33, 6, 'descript_categactu', 'rich_text_box', 'Description Categorie d actu', 0, 1, 1, 1, 1, 1, '{}', 3),
 (34, 6, 'created_at', 'timestamp', 'Created At', 0, 0, 0, 0, 0, 0, '{}', 4),
 (35, 6, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 5),
-(36, 6, 'categorieactu_belongstomany_actualite_categorieactu_relationship', 'relationship', 'Actualites liees', 0, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\Actualite\",\"table\":\"actualites\",\"type\":\"belongsToMany\",\"column\":\"id\",\"key\":\"id\",\"label\":\"titre_actu\",\"pivot_table\":\"actualite_categorieactu\",\"pivot\":\"1\",\"taggable\":\"0\"}', 6);
+(36, 6, 'categorieactu_belongstomany_actualite_categorieactu_relationship', 'relationship', 'Actualites liees', 0, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\Actualite\",\"table\":\"actualites\",\"type\":\"belongsToMany\",\"column\":\"id\",\"key\":\"id\",\"label\":\"titre_actu\",\"pivot_table\":\"actualite_categorieactu\",\"pivot\":\"1\",\"taggable\":\"0\"}', 6),
+(37, 7, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
+(38, 7, 'nommination', 'text', 'Nommination', 1, 1, 1, 1, 1, 1, '{}', 2),
+(39, 7, 'description', 'rich_text_box', 'Description', 0, 1, 1, 1, 1, 1, '{}', 3),
+(40, 7, 'logo', 'text', 'Logo', 1, 1, 1, 1, 1, 1, '{}', 4),
+(41, 7, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 5),
+(42, 7, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 6),
+(43, 8, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
+(44, 8, 'nom_prenom', 'text', 'Nom de prénom', 1, 1, 1, 1, 1, 1, '{}', 2),
+(45, 8, 'poste', 'text', 'Poste', 1, 1, 1, 1, 1, 1, '{}', 3),
+(46, 8, 'mot_de_lequipier', 'rich_text_box', 'Mot de l\' équipier', 0, 1, 1, 1, 1, 1, '{}', 4),
+(47, 8, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 5),
+(48, 8, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 6),
+(49, 9, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
+(50, 9, 'titre', 'text', 'Titre', 1, 1, 1, 1, 1, 1, '{}', 2),
+(51, 9, 'image', 'text', 'Image', 1, 1, 1, 1, 1, 1, '{}', 3),
+(52, 9, 'description', 'rich_text_box', 'Description', 0, 1, 1, 1, 1, 1, '{}', 4),
+(53, 9, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 5),
+(54, 9, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 6),
+(55, 11, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
+(56, 11, 'nom_prenom', 'text', 'Nom Prenom', 1, 1, 1, 1, 1, 1, '{}', 2),
+(57, 11, 'email', 'text', 'Email', 1, 1, 1, 1, 1, 1, '{}', 3),
+(58, 11, 'sujet', 'text', 'Sujet', 1, 1, 1, 1, 1, 1, '{}', 4),
+(59, 11, 'telephone', 'text', 'Telephone', 0, 1, 1, 1, 1, 1, '{}', 5),
+(60, 11, 'message', 'text_area', 'Message', 0, 1, 1, 1, 1, 1, '{}', 6),
+(61, 11, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 7),
+(62, 11, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 8);
 
 -- --------------------------------------------------------
 
@@ -166,9 +235,28 @@ INSERT INTO `data_types` (`id`, `name`, `slug`, `display_name_singular`, `displa
 (1, 'users', 'users', 'User', 'Users', 'voyager-person', 'TCG\\Voyager\\Models\\User', 'TCG\\Voyager\\Policies\\UserPolicy', 'TCG\\Voyager\\Http\\Controllers\\VoyagerUserController', '', 1, 0, NULL, '2024-10-09 13:57:46', '2024-10-09 13:57:46'),
 (2, 'menus', 'menus', 'Menu', 'Menus', 'voyager-list', 'TCG\\Voyager\\Models\\Menu', NULL, '', '', 1, 0, NULL, '2024-10-09 13:57:46', '2024-10-09 13:57:46'),
 (3, 'roles', 'roles', 'Role', 'Roles', 'voyager-lock', 'TCG\\Voyager\\Models\\Role', NULL, 'TCG\\Voyager\\Http\\Controllers\\VoyagerRoleController', '', 1, 0, NULL, '2024-10-09 13:57:47', '2024-10-09 13:57:47'),
-(4, 'actualites', 'actualites', 'Actualite', 'Actualites', 'voyager-news', 'App\\Actualite', NULL, NULL, NULL, 1, 1, '{\"order_column\":\"id\",\"order_display_column\":\"id\",\"order_direction\":\"asc\",\"default_search_key\":\"titre_actu\",\"scope\":null}', '2024-10-11 10:02:55', '2024-10-11 15:41:09'),
+(4, 'actualites', 'actualites', 'Actualite', 'Actualites', 'voyager-news', 'App\\Actualite', NULL, NULL, NULL, 1, 1, '{\"order_column\":\"id\",\"order_display_column\":\"id\",\"order_direction\":\"asc\",\"default_search_key\":\"titre_actu\",\"scope\":null}', '2024-10-11 10:02:55', '2024-10-16 09:50:55'),
 (5, 'categorieactu', 'categorieactu', 'Categorie Actualite', 'Categorie Actualites', 'voyager-categories', 'App\\Categorieactu', NULL, NULL, NULL, 1, 1, '{\"order_column\":\"id\",\"order_display_column\":\"id\",\"order_direction\":\"asc\",\"default_search_key\":\"titre_categactu\"}', '2024-10-11 10:24:43', '2024-10-11 10:24:43'),
-(6, 'categorieactus', 'categorieactus', 'Categorie Actualite', 'Categorie Actualites', 'voyager-categories', 'App\\Categorieactu', NULL, NULL, NULL, 1, 0, '{\"order_column\":\"id\",\"order_display_column\":\"titre_categactu\",\"order_direction\":\"asc\",\"default_search_key\":\"titre_categactu\",\"scope\":null}', '2024-10-11 14:13:56', '2024-10-11 15:42:06');
+(6, 'categorieactus', 'categorieactus', 'Categorie Actualite', 'Categorie Actualites', 'voyager-categories', 'App\\Categorieactu', NULL, NULL, NULL, 1, 0, '{\"order_column\":\"id\",\"order_display_column\":\"titre_categactu\",\"order_direction\":\"asc\",\"default_search_key\":\"titre_categactu\",\"scope\":null}', '2024-10-11 14:13:56', '2024-10-16 09:49:31'),
+(7, 'partenaires', 'partenaires', 'Partenaire', 'Partenaires', NULL, 'App\\Partenaire', NULL, NULL, NULL, 1, 1, '{\"order_column\":\"id\",\"order_display_column\":\"nommination\",\"order_direction\":\"asc\",\"default_search_key\":\"nommination\"}', '2024-10-16 10:00:41', '2024-10-16 10:00:41'),
+(8, 'equipes', 'equipes', 'Equipe', 'Equipes', 'voyager-people', 'App\\Equipe', NULL, NULL, NULL, 1, 1, '{\"order_column\":\"id\",\"order_display_column\":\"nom_prenom\",\"order_direction\":\"asc\",\"default_search_key\":\"nom_prenom\"}', '2024-10-16 10:29:41', '2024-10-16 10:29:41'),
+(9, 'services', 'services', 'Service', 'Services', 'voyager-documentation', 'App\\Service', NULL, NULL, NULL, 1, 1, '{\"order_column\":\"id\",\"order_display_column\":\"titre\",\"order_direction\":\"asc\",\"default_search_key\":\"titre\"}', '2024-10-16 10:43:44', '2024-10-16 10:43:44'),
+(11, 'contacts', 'contacts', 'Contact', 'Contacts', 'voyager-info-circled', 'App\\Contact', NULL, NULL, NULL, 1, 1, '{\"order_column\":\"id\",\"order_display_column\":\"nom_prenom\",\"order_direction\":\"asc\",\"default_search_key\":\"nom_prenom\",\"scope\":null}', '2024-10-16 11:20:42', '2024-10-16 11:31:07');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `equipes`
+--
+
+CREATE TABLE `equipes` (
+  `id` int UNSIGNED NOT NULL,
+  `nom_prenom` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `poste` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `mot_de_lequipier` text COLLATE utf8mb4_unicode_ci,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -238,18 +326,22 @@ INSERT INTO `menu_items` (`id`, `menu_id`, `title`, `url`, `target`, `icon_class
 (2, 1, 'Mediathèques', '', '_self', 'voyager-images', '#000000', NULL, 4, '2024-10-09 13:57:52', '2024-10-11 10:07:28', 'voyager.media.index', 'null'),
 (3, 1, 'Utilisateurs', '', '_self', 'voyager-person', '#000000', NULL, 3, '2024-10-09 13:57:52', '2024-10-10 10:45:29', 'voyager.users.index', 'null'),
 (4, 1, 'Roles', '', '_self', 'voyager-lock', '#000000', NULL, 2, '2024-10-09 13:57:53', '2024-10-10 10:45:17', 'voyager.roles.index', 'null'),
-(5, 1, 'Options', '', '_self', 'voyager-tools', '#000000', NULL, 6, '2024-10-09 13:57:53', '2024-10-11 14:32:07', NULL, ''),
+(5, 1, 'Options', '', '_self', 'voyager-tools', '#000000', NULL, 10, '2024-10-09 13:57:53', '2024-10-16 11:21:22', NULL, ''),
 (6, 1, 'Créer Menu', '', '_self', 'voyager-list', '#000000', 5, 1, '2024-10-09 13:57:53', '2024-10-11 10:07:28', 'voyager.menus.index', 'null'),
 (7, 1, 'Données', '', '_self', 'voyager-data', '#000000', 5, 2, '2024-10-09 13:57:53', '2024-10-11 10:07:28', 'voyager.database.index', 'null'),
 (8, 1, 'Icones & Divers', '', '_self', 'voyager-compass', '#000000', 5, 3, '2024-10-09 13:57:53', '2024-10-11 10:07:28', 'voyager.compass.index', 'null'),
 (9, 1, 'CRUD', '', '_self', 'voyager-bread', '#000000', 5, 4, '2024-10-09 13:57:53', '2024-10-11 10:07:28', 'voyager.bread.index', 'null'),
-(10, 1, 'Paramètres', '', '_self', 'voyager-settings', '#000000', NULL, 7, '2024-10-09 13:57:53', '2024-10-11 14:32:07', 'voyager.settings.index', 'null'),
+(10, 1, 'Paramètres', '', '_self', 'voyager-settings', '#000000', NULL, 11, '2024-10-09 13:57:53', '2024-10-16 11:21:22', 'voyager.settings.index', 'null'),
 (11, 2, 'ACCUEIL', '/', '_self', NULL, '#050505', NULL, 1, '2024-10-09 15:00:45', '2024-10-09 15:04:16', NULL, ''),
 (12, 2, 'A PROPOS', '', '_self', NULL, '#000000', NULL, 2, '2024-10-09 15:03:19', '2024-10-10 09:07:50', NULL, ''),
 (13, 2, 'Présentation', '/presentation.html', '_self', NULL, '#000000', 12, 1, '2024-10-09 15:04:09', '2024-10-10 09:08:07', NULL, ''),
 (14, 1, 'Actualites', '', '_self', 'voyager-news', NULL, 16, 1, '2024-10-11 10:02:55', '2024-10-11 14:31:58', 'voyager.actualites.index', NULL),
 (15, 1, 'Categorie Actualites', '', '_self', 'voyager-categories', '#000000', 16, 2, '2024-10-11 10:24:43', '2024-10-11 14:32:07', 'voyager.categorieactus.index', 'null'),
-(16, 1, 'Groupe d\'Actualités', '', '_self', 'voyager-categories', '#000000', NULL, 5, '2024-10-11 14:31:36', '2024-10-11 14:33:35', NULL, '');
+(16, 1, 'Groupe d\'Actualités', '', '_self', 'voyager-categories', '#000000', NULL, 6, '2024-10-11 14:31:36', '2024-10-16 11:21:33', NULL, ''),
+(17, 1, 'Parténaires', '', '_self', 'voyager-group', '#000000', NULL, 7, '2024-10-16 10:00:41', '2024-10-16 11:21:33', 'voyager.partenaires.index', 'null'),
+(18, 1, 'Equipes', '', '_self', 'voyager-people', NULL, NULL, 8, '2024-10-16 10:29:41', '2024-10-16 11:21:33', 'voyager.equipes.index', NULL),
+(19, 1, 'Services', '', '_self', 'voyager-documentation', NULL, NULL, 5, '2024-10-16 10:43:44', '2024-10-16 11:21:33', 'voyager.services.index', NULL),
+(20, 1, 'Contacts', '', '_self', 'voyager-info-circled', NULL, NULL, 9, '2024-10-16 11:20:42', '2024-10-16 11:21:22', 'voyager.contacts.index', NULL);
 
 -- --------------------------------------------------------
 
@@ -292,6 +384,21 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (22, '2018_03_16_000000_make_settings_value_nullable', 1),
 (23, '2019_08_19_000000_create_failed_jobs_table', 1),
 (24, '2019_12_14_000001_create_personal_access_tokens_table', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `partenaires`
+--
+
+CREATE TABLE `partenaires` (
+  `id` int UNSIGNED NOT NULL,
+  `nommination` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `description` text COLLATE utf8mb4_unicode_ci,
+  `logo` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -363,7 +470,27 @@ INSERT INTO `permissions` (`id`, `key`, `table_name`, `created_at`, `updated_at`
 (37, 'read_categorieactus', 'categorieactus', '2024-10-11 14:13:56', '2024-10-11 14:13:56'),
 (38, 'edit_categorieactus', 'categorieactus', '2024-10-11 14:13:56', '2024-10-11 14:13:56'),
 (39, 'add_categorieactus', 'categorieactus', '2024-10-11 14:13:56', '2024-10-11 14:13:56'),
-(40, 'delete_categorieactus', 'categorieactus', '2024-10-11 14:13:56', '2024-10-11 14:13:56');
+(40, 'delete_categorieactus', 'categorieactus', '2024-10-11 14:13:56', '2024-10-11 14:13:56'),
+(41, 'browse_partenaires', 'partenaires', '2024-10-16 10:00:41', '2024-10-16 10:00:41'),
+(42, 'read_partenaires', 'partenaires', '2024-10-16 10:00:41', '2024-10-16 10:00:41'),
+(43, 'edit_partenaires', 'partenaires', '2024-10-16 10:00:41', '2024-10-16 10:00:41'),
+(44, 'add_partenaires', 'partenaires', '2024-10-16 10:00:41', '2024-10-16 10:00:41'),
+(45, 'delete_partenaires', 'partenaires', '2024-10-16 10:00:41', '2024-10-16 10:00:41'),
+(46, 'browse_equipes', 'equipes', '2024-10-16 10:29:41', '2024-10-16 10:29:41'),
+(47, 'read_equipes', 'equipes', '2024-10-16 10:29:41', '2024-10-16 10:29:41'),
+(48, 'edit_equipes', 'equipes', '2024-10-16 10:29:41', '2024-10-16 10:29:41'),
+(49, 'add_equipes', 'equipes', '2024-10-16 10:29:41', '2024-10-16 10:29:41'),
+(50, 'delete_equipes', 'equipes', '2024-10-16 10:29:41', '2024-10-16 10:29:41'),
+(51, 'browse_services', 'services', '2024-10-16 10:43:44', '2024-10-16 10:43:44'),
+(52, 'read_services', 'services', '2024-10-16 10:43:44', '2024-10-16 10:43:44'),
+(53, 'edit_services', 'services', '2024-10-16 10:43:44', '2024-10-16 10:43:44'),
+(54, 'add_services', 'services', '2024-10-16 10:43:44', '2024-10-16 10:43:44'),
+(55, 'delete_services', 'services', '2024-10-16 10:43:44', '2024-10-16 10:43:44'),
+(56, 'browse_contacts', 'contacts', '2024-10-16 11:20:42', '2024-10-16 11:20:42'),
+(57, 'read_contacts', 'contacts', '2024-10-16 11:20:42', '2024-10-16 11:20:42'),
+(58, 'edit_contacts', 'contacts', '2024-10-16 11:20:42', '2024-10-16 11:20:42'),
+(59, 'add_contacts', 'contacts', '2024-10-16 11:20:42', '2024-10-16 11:20:42'),
+(60, 'delete_contacts', 'contacts', '2024-10-16 11:20:42', '2024-10-16 11:20:42');
 
 -- --------------------------------------------------------
 
@@ -420,7 +547,27 @@ INSERT INTO `permission_role` (`permission_id`, `role_id`) VALUES
 (37, 1),
 (38, 1),
 (39, 1),
-(40, 1);
+(40, 1),
+(41, 1),
+(42, 1),
+(43, 1),
+(44, 1),
+(45, 1),
+(46, 1),
+(47, 1),
+(48, 1),
+(49, 1),
+(50, 1),
+(51, 1),
+(52, 1),
+(53, 1),
+(54, 1),
+(55, 1),
+(56, 1),
+(57, 1),
+(58, 1),
+(59, 1),
+(60, 1);
 
 -- --------------------------------------------------------
 
@@ -462,6 +609,21 @@ CREATE TABLE `roles` (
 INSERT INTO `roles` (`id`, `name`, `display_name`, `created_at`, `updated_at`) VALUES
 (1, 'admin', 'Administrator', '2024-10-09 13:57:53', '2024-10-09 13:57:53'),
 (2, 'user', 'Normal User', '2024-10-09 13:57:53', '2024-10-09 13:57:53');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `services`
+--
+
+CREATE TABLE `services` (
+  `id` int UNSIGNED NOT NULL,
+  `titre` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `image` mediumtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `description` text COLLATE utf8mb4_unicode_ci,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -575,6 +737,12 @@ ALTER TABLE `categorieactus`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `contacts`
+--
+ALTER TABLE `contacts`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `data_rows`
 --
 ALTER TABLE `data_rows`
@@ -588,6 +756,12 @@ ALTER TABLE `data_types`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `data_types_name_unique` (`name`),
   ADD UNIQUE KEY `data_types_slug_unique` (`slug`);
+
+--
+-- Indexes for table `equipes`
+--
+ALTER TABLE `equipes`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `failed_jobs`
@@ -614,6 +788,12 @@ ALTER TABLE `menu_items`
 -- Indexes for table `migrations`
 --
 ALTER TABLE `migrations`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `partenaires`
+--
+ALTER TABLE `partenaires`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -653,6 +833,12 @@ ALTER TABLE `roles`
   ADD UNIQUE KEY `roles_name_unique` (`name`);
 
 --
+-- Indexes for table `services`
+--
+ALTER TABLE `services`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `settings`
 --
 ALTER TABLE `settings`
@@ -690,7 +876,7 @@ ALTER TABLE `user_roles`
 -- AUTO_INCREMENT for table `actualites`
 --
 ALTER TABLE `actualites`
-  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `categorieactus`
@@ -699,16 +885,28 @@ ALTER TABLE `categorieactus`
   MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT for table `contacts`
+--
+ALTER TABLE `contacts`
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `data_rows`
 --
 ALTER TABLE `data_rows`
-  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
 
 --
 -- AUTO_INCREMENT for table `data_types`
 --
 ALTER TABLE `data_types`
-  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- AUTO_INCREMENT for table `equipes`
+--
+ALTER TABLE `equipes`
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -726,7 +924,7 @@ ALTER TABLE `menus`
 -- AUTO_INCREMENT for table `menu_items`
 --
 ALTER TABLE `menu_items`
-  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `migrations`
@@ -735,10 +933,16 @@ ALTER TABLE `migrations`
   MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
+-- AUTO_INCREMENT for table `partenaires`
+--
+ALTER TABLE `partenaires`
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `permissions`
 --
 ALTER TABLE `permissions`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`
@@ -751,6 +955,12 @@ ALTER TABLE `personal_access_tokens`
 --
 ALTER TABLE `roles`
   MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `services`
+--
+ALTER TABLE `services`
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `settings`
