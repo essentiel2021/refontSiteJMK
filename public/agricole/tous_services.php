@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fr-FR" class="no-js">
 
 <head>
@@ -7,45 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <!-- TITLE -->
-    <title>JMK CONSULTING COMPANY: Negoce de matières premières & services agricoles</title>
+    <title>Services - JMK CONSULTING COMPANY: Negoce de matières premières & services agricoles</title>
 
-    <!--  FAVICON  -->
-    <link rel="shortcut icon" href="images/icons/favicon.png">
-
-    <!-- FONT AWESOME ICONS LIBRARY -->
-    <link rel="stylesheet" href="fonts/css/all.min.css">
-
-    <!-- REVOLUTION ADDONS -->
-    <link href="../../css?family=Roboto%3A700%2C300" rel="stylesheet" property="stylesheet" type="text/css" media="all">
-    <link rel="stylesheet" type="text/css" href="revolution/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
-    <link rel="stylesheet" type="text/css" href="revolution/fonts/font-awesome/css/font-awesome.css">
-
-    <!-- REVOLUTION STYLE SHEETS -->
-    <link rel="stylesheet" type="text/css" href="revolution/css/settings.css">
-
-    <!-- REVOLUTION LAYERS STYLES -->
-    <link rel="stylesheet" type="text/css" href="revolution/css/layers.css">
-
-    <!-- REVOLUTION NAVIGATION STYLES -->
-    <link rel="stylesheet" type="text/css" href="revolution/css/navigation.css">
-
-    <!-- CSS LIBRARY STYLES -->
-    <link rel="stylesheet" href="css/lib/bootstrap.min.css">
-    <link rel='stylesheet' href="css/lib/flickity.min.css">
-    <link rel='stylesheet' href="css/lib/magnific-popup.min.css">
-    <link rel="stylesheet" href="css/lib/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/lib/slick.min.css">
-    <link rel="stylesheet" href="css/lib/aos.min.css">
-    <link rel="stylesheet" href="css/navbar.css">
-
-    <!-- CSS TEMPLATE STYLES -->
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/stylesheet.css">
-    <link rel="stylesheet" href="css/rev-slider.css">
-    <link rel="stylesheet" href="css/responsive.css">
-
-    <!-- MODERNIZR LIBRARY -->
-    <script src="js/modernizr-custom.js"></script>
+    <?php include 'component/style.php';?>
 
 </head>
 
@@ -58,75 +22,10 @@
     <!-- LOADER -->
 
     <header>
-        <!-- TOP HEADER START -->
-        <div class="top-header-wrapper">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="top-header-left">
-                            <p class="address">Abidjan-Cocody Angré 8eme Tranche (Carrefour prière) : (+225) 0787767134</p>
-                        </div>
-                    </div>
 
-                    <div class="col-md-6 text-right">
-                        <div class="top-header-right">  
-                            <a href="mailto:infos@jmkconsulting-ci.com"><p class="schedule">infos@jmkconsulting-ci.com</p></a>
-                            <ul class="top-social">
-                                <li><a href="https://www.facebook.com/jmkconsultingcompany" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="https://www.linkedin.com/company/jmk-consulting-company/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-                            </ul>
-                            <a class="btn btn-default" href="contacts.php" role="button">CONTACT</a>
-                        </div>
-                    </div>
+        <?php include 'component/nav.php';?>
 
-                </div>
-            </div>
-        </div>
-        <!-- TOP HEADER END -->
-
-        <!-- NAV START -->
-        <nav class="navbar navbar-expand-lg navbar-dark">
-            <div class="container">
-                <a href="index.html" class="navbar-brand"><img src="images/logos/logo-default.png" alt=""></a>
-
-                <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#main-nav">
-                    <span class="menu-icon-bar"></span>
-                    <span class="menu-icon-bar"></span>
-                    <span class="menu-icon-bar"></span>
-                </button>
-
-                <div id="main-nav" class="collapse navbar-collapse">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="dropdown">
-                            <a href="index.html" class="nav-item nav-link">ACCUEIL</a>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="nav-item nav-link" data-toggle="dropdown">A PROPOS</a>
-                            <div class="dropdown-menu">
-                                <a href="presentation.html" class="dropdown-item">Présentation</a>
-                                <a href="equipe.html" class="dropdown-item">Notre Equipe</a>
-                                <a href="approche.html" class="dropdown-item">Nos Valeurs</a>
-                            </div>
-                        </li>
-                        <li class="dropdown">
-                            <a href="tous_services.html" class="nav-item nav-link active">SERVICES</a>
-                        </li>
-                        <li class="dropdown">
-                            <a href="synergie_jmk.html" class="nav-item nav-link">SYNERGIE</a>
-                        </li>
-                        <li class="dropdown">
-                            <a href="prod_fieldconnect.html" class="nav-item nav-link">PRODUITS</a>
-                        </li>
-                        <li class="dropdown">
-                            <a href="actus.html" class="nav-item nav-link">ACTUALITES</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <!-- NAV END -->
-
-        <!--PAGES HERO START -->
+            <!--PAGES HERO START -->
         <div class="pages-hero">
             <div class="container">
                 <div class="pages-title">
@@ -135,6 +34,7 @@
             </div>
         </div>
         <!--PAGES HERO END -->
+
     </header>
 
     <!-- CONTENT START -->
@@ -289,106 +189,14 @@
         </div>
     </section>
     <!-- CONTENT END -->
-
-    <!-- FOOTER START -->
-    <footer>
-        <div class="container mt-5">
-            <div class="center-footer">
-                <div class="row">
-                    <div class="col-lg-5">
-                        <div class="footer-col footer-left-col">
-                            <figure class="site-footer-logo">
-                                <img src="images/logos/footer-logo.png" alt="">
-                            </figure>
-                            <p>« Construire et développer des filières agricoles résilientes et des PME durables »
-                            </p>
-                            <ul class="footer-social">
-                                <li><a href="https://www.facebook.com/jmkconsultingcompany" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="https://www.linkedin.com/company/jmk-consulting-company/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="footer-col">
-                            <h5>Liens utiles</h5>
-                            <ul class="quick-links">
-                                <li><a href="index.html">Accueil</a></li>
-                                <li><a href="presentation.html">A propos</a></li>
-                                <li><a href="tous_services.html">Services</a></li>
-                                <li><a href="prod_fieldconnect.html">Produits </a></li>
-                                <li><a href="actus.html">Actualités</a></li>
-                                <li><a href="contacts.php">Contact</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="footer-col">
-                            <h5>Nous contacter</h5>
-                            <ul class="quick-links">
-                                <li><a href="tel:+2250709095378">(+225) 0787767134</a></li><br>
-                                <li><a href="#">RCI, Abidjan Cocody Angré 8eme Tranche</a></li><br>
-                                <li><a href="mailto:infos@jmkconsulting-ci.com">infos@jmkconsulting-ci.com</a></li>                               
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <hr class="footer-line">
-            <div class="bottom-footer">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="footer-copyright">
-                            <p>© 2022 <a href="#">Copyright © 2022, Tous droits réservés, JMK CONSULTING COMPANY</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- FOOTER END -->
-
+    
+    <?php include 'component/footer.php';?>
+    
     <!--SCROLL TOP START-->
     <a href="#0" class="cd-top">Top</a>
     <!--SCROLL TOP START-->
-
-    <!-- JAVASCRIPTS -->
-    <script src="js/lib/jquery-3.5.1.min.js"></script>
-    <script src="js/lib/bootstrap.min.js"></script>
-    <script src="js/lib/plugins.js"></script>
-    <script src="js/lib/nav.fixed.top.js"></script>
-    <script src="js/lib/contact.js"></script>
-    <script src="js/main.js"></script>
-    <!-- JAVASCRIPTS END -->
-
-    <script>
-        $(document).ready(function(){
-            $('.toggle-button').click(function() {
-                var text = $(this).siblings('.text');  // Select the sibling with class "text"
-                if (text.hasClass('expanded')) {
-                    text.removeClass('expanded');
-                    $(this).text('Lire plus');
-                } else {
-                    text.addClass('expanded');
-                    $(this).text('Lire moins');
-                }
-            });
-        });
-    </script>
-    <!-- REVOLUTION JS FILES -->
-    <script src="revolution/js/jquery.themepunch.tools.min.js"></script>
-    <script src="revolution/js/jquery.themepunch.revolution.min.js"></script>
-
-    <!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->
-    <script src="revolution/js/extensions/revolution.extension.actions.min.js"></script>
-    <script src="revolution/js/extensions/revolution.extension.carousel.min.js"></script>
-    <script src="revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
-    <script src="revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
-    <script src="revolution/js/extensions/revolution.extension.migration.min.js"></script>
-    <script src="revolution/js/extensions/revolution.extension.navigation.min.js"></script>
-    <script src="revolution/js/extensions/revolution.extension.parallax.min.js"></script>
-    <script src="revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
-    <script src="revolution/js/extensions/revolution.extension.video.min.js"></script>
-    <script src="js/rev-sliders/slider-home-2.js"></script>
+    
+    <?php include 'component/script.php';?>
 
     <script>
     </script>

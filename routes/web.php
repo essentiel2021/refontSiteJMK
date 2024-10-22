@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return abort(404, 'Le chemin n\'a pas été trouvé');
+    return redirect("/agricole/");
 });
 
 

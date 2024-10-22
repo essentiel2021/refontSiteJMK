@@ -38,27 +38,27 @@
                 <div id="main-nav" class="collapse navbar-collapse">
                     <ul class="navbar-nav ml-auto">
                         <li class="dropdown">
-                            <a href="index.html" class="nav-item nav-link active">ACCUEIL</a>
+                            <a href="index.php" class="nav-item nav-link active">ACCUEIL</a>
                         </li>
                         <li class="dropdown">
                             <a href="#" class="nav-item nav-link" data-toggle="dropdown">A PROPOS</a>
                             <div class="dropdown-menu">
                                 <a href="presentation.php" class="dropdown-item">Présentation</a>
-                                <a href="equipe.html" class="dropdown-item">Notre Equipe</a>
-                                <a href="approche.html" class="dropdown-item">Nos Valeurs</a>
+                                <a href="equipe.php" class="dropdown-item">Notre Equipe</a>
+                                <a href="approche.php" class="dropdown-item">Nos Valeurs</a>
                             </div>
                         </li>
                         <li class="dropdown">
-                            <a href="tous_services.html" class="nav-item nav-link">SERVICES</a>
+                            <a href="tous_services.php" class="nav-item nav-link">SERVICES</a>
                         </li>
                         <li class="dropdown">
-                            <a href="synergie_jmk.html" class="nav-item nav-link">SYNERGIE</a>
+                            <a href="synergie_jmk.php" class="nav-item nav-link">SYNERGIE</a>
                         </li>
                         <li class="dropdown">
-                            <a href="prod_fieldconnect.html" class="nav-item nav-link">PRODUITS</a>
+                            <a href="prod_fieldconnect.php" class="nav-item nav-link">PRODUITS</a>
                         </li>
                         <li class="dropdown">
-                            <a href="actus.html" class="nav-item nav-link">ACTUALITES</a>
+                            <a href="actus.php" class="nav-item nav-link">ACTUALITES</a>
                         </li>
                     </ul>
                 </div>

@@ -1,3 +1,9 @@
+<?php
+// Inclure le fichier de connexion
+include 'db.php';
+
+?>
+
 <!--  FAVICON  -->
 <link rel="shortcut icon" href="images/icons/favicon.png">
 
