@@ -57,9 +57,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 ':message' => $message
             ]);
 
-            // echo "Merci, votre message a bien été envoyé.";
+            // Redirection vers la page de succès
+
+            header("Location: page_succes.php");
+            exit();
         } catch (PDOException $e) {
-            // echo "Erreur: " . $e->getMessage();
+            // Redirection vers la page d'erreur
+            header("Location: page_erreur.php");
+            exit();
         }
     } else {
         echo "Veuillez remplir tous les champs requis.";
