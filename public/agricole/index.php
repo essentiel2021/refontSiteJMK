@@ -319,222 +319,38 @@
                 </div>
             </div>
         </div>
+        
 
+        <?php
+            // Requête pour récupérer les données des partenaires
+            $sql = "SELECT * FROM partenaires";
+            $stmt = $pdo->query($sql);
+            // Récupérer les résultats sous forme de tableau associatif
+            $partenaires = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        ?>
         <!-- PARNERS CAROUSEL START -->
         <div class="section-title">
         <h2 style="line-height: 90px;">Nos partenaires</h2>
         </div>
-        <div class="container mt-5 mb-5">
-            
+        <div class="container mt-5 mb-5">           
             <div class="clients-carousel">
                 <div class="owl-carousel owl-theme">
+                
+                <?php foreach ($partenaires as &$partenaire): ?>
                     <div class="item" style="display: flex; height: 100px; width: 100px; justify-content: center; align-items: center;">
                         <div class="client-box">
                             <figure class="client-icon" style="width: 115px; margin: 0px 4px;">
-                                <img src="images/logos/Advans.jpg" alt="">
+                            <img src="<?= convertBackslashToSlashForStorage($partenaire['logo']) ?>" alt="<?= $partenaire['nommination'] ?>">
                             </figure>
                         </div>
                     </div>
-                    <div class="item" style="display: flex; height: 100px; width: 100px; justify-content: center; align-items: center;">
-                        <div class="client-box">
-                            <figure class="client-icon" style="width: 110px; margin: 0px 4px;">
-                                <img src="images/logos/Agriterra.jpg" alt="">
-                            </figure>
-                        </div>
-                    </div>
-                    <div class="item" style="display: flex; height: 100px; width: 100px; justify-content: center; align-items: center;">
-                        <div class="client-box">
-                            <figure class="client-icon" style="width: 115px; margin: 0px 4px;">
-                                <img src="images/logos/AGT.jpg" alt="">
-                            </figure>
-                        </div>
-                    </div>
-                    <div class="item" style="display: flex; height: 100px; width: 100px; justify-content: center; align-items: center;">
-                        <div class="client-box">
-                            <figure class="client-icon" style="width: 115px; margin: 0px 4px;">
-                                <img src="images/logos/Cargill-logo.png" alt="">
-                            </figure>
-                        </div>
-                    </div>
-                    <div class="item" style="display: flex; height: 100px; width: 100px; justify-content: center; align-items: center;">
-                        <div class="client-box">
-                            <figure class="client-icon" style="width: 115px; margin: 0px 4px;">
-                                <img src="images/logos/CCB.jpg" alt="">
-                            </figure>
-                        </div>
-                    </div>
-                    <div class="item" style="display: flex; height: 100px; width: 100px; justify-content: center; align-items: center;">
-                        <div class="client-box">
-                            <figure class="client-icon" style="width: 115px; margin: 0px 4px;">
-                                <img src="images/logos/CCC_logo.png" alt="">
-                            </figure>
-                        </div>
-                    </div>
-                    <div class="item" style="display: flex; height: 100px; width: 100px; justify-content: center; align-items: center;">
-                        <div class="client-box">
-                            <figure class="client-icon" style="width: 80px; margin: 0px 4px;">
-                                <img src="images/logos/E&F_logo.png" alt="">
-                            </figure>
-                        </div>
-                    </div>
-                    <div class="item" style="display: flex; height: 100px; width: 100px; justify-content: center; align-items: center;">
-                        <div class="client-box">
-                            <figure class="client-icon" style="width: 115px; margin: 0px 4px;">
-                                <img src="images/logos/Fairtrade-Int.jpg" alt="">
-                            </figure>
-                        </div>
-                    </div>
-                    <div class="item" style="display: flex; height: 100px; width: 100px; justify-content: center; align-items: center;">
-                        <div class="client-box">
-                            <figure class="client-icon" style="width: 110px; margin: 0px 4px;">
-                                <img src="images/logos/GIZ-logo.png" alt="">
-                            </figure>
-                        </div>
-                    </div>
-                    <div class="item" style="display: flex; height: 100px; width: 100px; justify-content: center; align-items: center;">
-                        <div class="client-box">
-                            <figure class="client-icon" style="width: 115px; margin: 0px 4px;">
-                                <img src="images/logos/heifer_logo.jpg" alt="">
-                            </figure>
-                        </div>
-                    </div>
-                    <div class="item" style="display: flex; height: 100px; width: 100px; justify-content: center; align-items: center;">
-                        <div class="client-box">
-                            <figure class="client-icon" style="width: 115px; margin: 0px 4px;">
-                                <img src="images/logos/IDH_logo.jpg" alt="">
-                            </figure>
-                        </div>
-                    </div>
-                    <div class="item" style="display: flex; height: 100px; width: 100px; justify-content: center; align-items: center;">
-                        <div class="client-box">
-                            <figure class="client-icon" style="width: 110px; margin: 0px 4px;">
-                                <img src="images/logos/Image-logo-cacao-trace.jpg" alt="">
-                            </figure>
-                        </div>
-                    </div>
-                    <div class="item" style="display: flex; height: 100px; width: 100px; justify-content: center; align-items: center;">
-                        <div class="client-box">
-                            <figure class="client-icon" style="width: 115px; margin: 0px 4px;">
-                                <img src="images/logos/Larive_logo_INT.png" alt="">
-                            </figure>
-                        </div>
-                    </div>
-                    <div class="item"style="display: flex; height: 100px; width: 100px; justify-content: center; align-items: center;">
-                        <div class="client-box">
-                            <figure class="client-icon" style="width: 115px; margin: 0px 4px;">
-                                <img src="images/logos/LOGO CÉMOI.jpg" alt="">
-                            </figure>
-                        </div>
-                    </div>
-                    <div class="item" style="display: flex; height: 100px; width: 100px; justify-content: center; align-items: center;">
-                        <div class="client-box">
-                            <figure class="client-icon" style="width: 115px; margin: 0px 4px;">
-                                <img src="images/logos/Logo Genie Bio-.jpg" alt="">
-                            </figure>
-                        </div>
-                    </div>
-                    <div class="item" style="display: flex; height: 100px; width: 100px; justify-content: center; align-items: center;">
-                        <div class="client-box">
-                            <figure class="client-icon" style="width: 115px; margin: 0px 4px;">
-                                <img src="images/logos/Logo Profil Ecakoog_.jpg" alt="">
-                            </figure>
-                        </div>
-                    </div>
-                    <div class="item" style="display: flex; height: 100px; width: 100px; justify-content: center; align-items: center;">
-                        <div class="client-box">
-                            <figure class="client-icon" style="width: 115px; margin: 0px 4px;">
-                                <img src="images/logos/Logo Profil_Plan.jpg" alt="">
-                            </figure>
-                        </div>
-                    </div>
-                    <div class="item" style="display: flex; height: 100px; width: 100px; justify-content: center; align-items: center;">
-                        <div class="client-box">
-                            <figure class="client-icon" style="width: 115px; margin: 0px 4px;">
-                                <img src="images/logos/Logo UPRAD-01.jpg" alt="">
-                            </figure>
-                        </div>
-                    </div>
-                    <div class="item" style="display: flex; height: 100px; width: 100px; justify-content: center; align-items: center;">
-                        <div class="client-box">
-                            <figure class="client-icon" style="width: 115px; margin: 0px 4px;">
-                                <img src="images/logos/logo_sicadevd.png" alt="">
-                            </figure>
-                        </div>
-                    </div>
-                    <div class="item" style="display: flex; height: 100px; width: 100px; justify-content: center; align-items: center;">
-                        <div class="client-box">
-                            <figure class="client-icon" style="width: 115px; margin: 0px 4px;">
-                                <img src="images/logos/logo-istom.jpg" alt="">
-                            </figure>
-                        </div>
-                    </div>
-                    <div class="item" style="display: flex; height: 100px; width: 100px; justify-content: center; align-items: center;">
-                        <div class="client-box">
-                            <figure class="client-icon" style="width: 115px; margin: 0px 4px;">
-                                <img src="images/logos/NL_logo.png" alt="">
-                            </figure>
-                        </div>
-                    </div>
-                    <div class="item" style="display: flex; height: 100px; width: 100px; justify-content: center; align-items: center;">
-                        <div class="client-box">
-                            <figure class="client-icon" style="width: 115px; margin: 0px 4px;">
-                                <img src="images/logos/puratos_logo.png" alt="">
-                            </figure>
-                        </div>
-                    </div>
-                    <div class="item" style="display: flex; height: 100px; width: 100px; justify-content: center; align-items: center;">
-                        <div class="client-box">
-                            <figure class="client-icon" style="width: 115px; margin: 0px 4px;">
-                                <img src="images/logos/push_panelyslogo.jpg" alt="">
-                            </figure>
-                        </div>
-                    </div>
-                    <div class="item" style="display: flex; height: 100px; width: 100px; justify-content: center; align-items: center;">
-                        <div class="client-box">
-                            <figure class="client-icon" style="width: 105px; margin: 0px 4px;">
-                                <img src="images/logos/Rcd.png" alt="">
-                            </figure>
-                        </div>
-                    </div>
-                    <div class="item" style="display: flex; height: 100px; width: 100px; justify-content: center; align-items: center;">
-                        <div class="client-box">
-                            <figure class="client-icon" style="width: 105px; margin: 0px 4px;">
-                                <img src="images/logos/RAinforest-01.jpg" alt="">
-                            </figure>
-                        </div>
-                    </div>
-                    <div class="item" style="display: flex; height: 100px; width: 100px; justify-content: center; align-items: center;">
-                        <div class="client-box">
-                            <figure class="client-icon" style="width: 115px; margin: 0px 4px;">
-                                <img src="images/logos/Risome.png" alt="">
-                            </figure>
-                        </div>
-                    </div>
-                    <div class="item" style="display: flex; height: 100px; width: 100px; justify-content: center; align-items: center;">
-                        <div class="client-box">
-                            <figure class="client-icon"style="width: 115px; margin: 0px 4px;">
-                                <img src="images/logos/sivago_logo.jpg" alt="">
-                            </figure>
-                        </div>
-                    </div>
-                    <div class="item" style="display: flex; height: 100px; width: 100px; justify-content: center; align-items: center;">
-                        <div class="client-box">
-                            <figure class="client-icon" style="width: 115px; margin: 0px 4px;">
-                                <img src="images/logos/Barry_Callebaut_logo.png" alt="">
-                            </figure>
-                        </div>
-                    </div>
-                    <div class="item" style="display: flex; height: 100px; width: 100px; justify-content: center; align-items: center;">
-                        <div class="client-box">
-                            <figure class="client-icon" style="width: 115px; margin: 0px 4px;">
-                                <img src="images/logos/Coojepawo.png" alt="">
-                            </figure>
-                        </div>
-                    </div>
+                <?php endforeach; ?>
                 </div>
             </div>
         </div>
         <!-- CLIENTS CAROUSEL END -->
+
+    
     </section>
     <!-- CONTENT END -->
 

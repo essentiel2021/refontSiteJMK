@@ -40,102 +40,40 @@
     <!-- CONTENT START -->
 
     <section>
+
+    <?php
+    // Requête pour récupérer les données de la table équipes
+    $sql = "SELECT * FROM equipes";
+    $stmt = $pdo->query($sql);
+    // Récupérer les résultats sous forme de tableau associatif
+    $equipes = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    ?>
+
         <div class="container mt-5 mb-5">
-            <div class="section-title">
-                <h2>Rencontrez nos professionnels</h2>
-                <p>Des experts qui allient savoir-faire et innovation pour vous accompagner.</p>
-            </div>
+                <div class="section-title">
+                    <h2>Rencontrez nos professionnels</h2>
+                    <p>Des experts qui allient savoir-faire et innovation pour vous accompagner.</p>
+                </div>
             <div class="row">
-                <div class="col-sm-6 col-lg-4">
-                    <div class="team-box">
-                        <figure class="team-portrait">
-                            <img src="images/commons/portrait1.jpg" alt="">
-                            <ul class="tc-social d-flex justify-content-center">
-                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="https://www.linkedin.com/company/jmk-consulting-company/"><i class="fab fa-linkedin-in"></i></a></li>
-                            </ul>
-                        </figure>
-                        <div class="team-caption">
-                            <h4>Kra Pacôme</h4>
-                            <p>Chief Executive Officer</p>
+
+                <?php foreach ($equipes as &$equipe): ?>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="team-box">
+                            <figure class="team-portrait">
+                            <img src="<?= convertBackslashToSlashForStorage($equipe['photo']) ?>" alt="<?= $equipe['nom_prenom'] ?>">
+                                <ul class="tc-social d-flex justify-content-center">
+                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="https://www.linkedin.com/company/jmk-consulting-company/"><i class="fab fa-linkedin-in"></i></a></li>
+                                </ul>
+                            </figure>
+                            <div class="team-caption">
+                            <h4><?= $equipe['nom_prenom'] ?></h4>
+                            <p><?= $equipe['poste'] ?></p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-sm-6 col-lg-4">
-                    <div class="team-box">
-                        <figure class="team-portrait">
-                            <img src="images/commons/portrait2.jpg" alt="">
-                            <ul class="tc-social d-flex justify-content-center">
-                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="https://www.linkedin.com/company/jmk-consulting-company/"><i class="fab fa-linkedin-in"></i></a></li>
-                            </ul>
-                        </figure>
-                        <div class="team-caption">
-                            <h4>Brou Albert</h4>
-                            <p>Responsable des Projets d'Innovation</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-4">
-                    <div class="team-box">
-                        <figure class="team-portrait">
-                            <img src="images/commons/portrait3.jpg" alt="">
-                            <ul class="tc-social d-flex justify-content-center">
-                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="https://www.linkedin.com/company/jmk-consulting-company/"><i class="fab fa-linkedin-in"></i></a></l>
-                            </ul>
-                        </figure>
-                        <div class="team-caption">
-                            <h4>Coulibaly Gema</h4>
-                            <p>Comptable</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-4">
-                    <div class="team-box">
-                        <figure class="team-portrait">
-                            <img src="images/commons/portrait4.jpg" alt="">
-                            <ul class="tc-social d-flex justify-content-center">
-                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="https://www.linkedin.com/company/jmk-consulting-company/"><i class="fab fa-linkedin-in"></i></a></li>
-                            </ul>
-                        </figure>
-                        <div class="team-caption">
-                            <h4>Mr Konan </h4>
-                            <p>Comptable</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-4">
-                    <div class="team-box">
-                        <figure class="team-portrait">
-                            <img src="images/commons/portrait5.jpg" alt="">
-                            <ul class="tc-social d-flex justify-content-center">
-                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></l>
-                                <li><a href="https://www.linkedin.com/company/jmk-consulting-company/"><i class="fab fa-linkedin-in"></i></a></li>
-                            </ul>
-                        </figure>
-                        <div class="team-caption">
-                            <h4>Achi Jathniel</h4>
-                            <p>Developper Web </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-4">
-                    <div class="team-box">
-                        <figure class="team-portrait">
-                            <img src="images/commons/portrait6.jpg" alt="">
-                            <ul class="tc-social d-flex justify-content-center">
-                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="https://www.linkedin.com/company/jmk-consulting-company/"><i class="fab fa-linkedin-in"></i></a></li>
-                            </ul>
-                        </figure>
-                        <div class="team-caption">
-                            <h4>Tchimou Junior </h4>
-                            <p>Dev.ops Mobile</p>
-                        </div>
-                    </div>
-                </div>
+                <?php endforeach; ?>        
+        
             </div>
         </div>
     </section>
